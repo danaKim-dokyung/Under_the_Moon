@@ -52,10 +52,11 @@
 
 ---
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dd3798d2-3e57-40ef-83a9-619a898f3310/Untitled.png)
+
 
 - 상세 보기를 원하시면 아래 Url을 참고해주세요.
-    
+    ![Untitled](https://user-images.githubusercontent.com/83184270/184530044-5e15923d-c3fd-43c0-9f44-f528a6a2f11d.png)
+
     [https://www.erdcloud.com/d/wdNtYArwPCWpBgcAj](https://www.erdcloud.com/d/wdNtYArwPCWpBgcAj)
     
 
@@ -90,7 +91,8 @@
 
 1) 월하합작 프로젝트 Overview 
 
-![Honeycam 2022-08-13 07-48-44.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d835a742-52c6-46ba-b477-e15a85757d51/Honeycam_2022-08-13_07-48-44.gif)
+
+
 
 - [http://3.37.11.69/](http://3.37.11.69/)
 
