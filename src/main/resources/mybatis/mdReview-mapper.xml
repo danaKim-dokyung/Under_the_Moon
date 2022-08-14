@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="MdReview">
+
+	<select id="selectAllByBoundByMdId" resultType="kh.spring.dto.MdReviewDTO">
+		select * from 
+		(select target.*, row_number() over(order by md_review_id desc) as rn 
+		from (select r.*, m.member_username from md_review r join member m on r.member_id = m.member_id where r.md_id =#{md_id}) target)
+		where rn between ${start} and ${end}
+	</select>
+	
+	<select id="selectAllByBoundByMdIdViewSort" resultType="kh.spring.dto.MdReviewDTO">
+		select * from 
+		(select target.*, row_number() over(order by md_review_view_count desc) as rn 
+		from (select r.*, m.member_username from md_review r join member m on r.member_id = m.member_id where r.md_id =#{md_id}) target)
+		where rn between ${start} and ${end}
+	</select>
+	
+	<select id="selectAllByBoundByMdIdLikeSort" resultType="kh.spring.dto.MdReviewDTO">
+		select * from 
+		(select target.*, row_number() over(order by md_review_like desc) as rn 
+		from (select r.*, m.member_username from md_review r join member m on r.member_id = m.member_id where r.md_id =#{md_id}) target)
+		where rn between ${start} and ${end}
+	</select>
+	
+	<select id="selectCount" resultType="int">
+		select count(*) from md_review where md_id = #{value}
+	</select>
+	
+	<update id="mdReviewViewCountUp">
+		update md_review set md_review_view_count = md_review_view_count+1 where md_review_id = #{value}
+	</update>
+	
+	<update id="mdReviewLikeCountUp">
+		update md_review set md_review_like = md_review_like+1 where md_review_id = #{value}
+	</update>
+	
+	<select id="selectMdReviewViewCount" resultType="int">
+		select md_review_view_count from md_review where md_review_id = #{value}
+	</select>
+
+	<select id="selectMdReviewLikeCount" resultType="int">
+		select md_review_like from md_review where md_review_id = #{value}
+	</select>
+	
+	<select id="selectAll" resultType="kh.spring.dto.MdReviewDTO">
+		select r.*, m.member_username from md_review r join member m on r.member_id = m.member_id
+	</select>
+	
+	<delete id="deleteByMdReviewId">
+		delete from md_review where md_review_id = #{value}
+	</delete>
+
+	<insert id="insertMdReview">
+		insert into md_review values(md_review_id_seq.nextval,#{md_id},#{md_review_title},#{member_id},#{md_review_content},
+		default,default,default,#{purchase_detail_id})
+		<selectKey resultType="int" order="AFTER" keyProperty="md_review_id">
+			SELECT md_review_id_seq.currval FROM dual
+		</selectKey>
+	</insert>
+	
+	<select id="selectMdReviewByMdReviewId" resultType="kh.spring.dto.MdReviewDTO">
+		select * from md_review where md_review_id = #{value}
+	</select>
+</mapper>

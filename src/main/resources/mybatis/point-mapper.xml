@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace ="Point">
+ 
+  <insert id="insertRecommendMemberPoint">
+     insert into point values(point_id_seq.nextval,'5000','추천인 입력',default,#{value})
+  </insert>
+  
+  <insert id="insertEventMemberPoint">
+     insert into point values(point_id_seq.nextval,'5000','이벤트 입력',default,#{value})
+  </insert>
+  
+  <select id="selectPointById" resultType="int">
+   		select sum(point_used_saved) from point where member_id = #{member_id}
+  </select>
+
+  <select id="selectPointListById" resultType="kh.spring.dto.PointDTO">
+  	select * from point where member_id = #{member_id}
+  </select>
+  
+  <select id="insertNotInputEvent">
+  	insert into point values(point_id_seq.nextval,'0','이벤트 미입력',default,#{value})
+  </select>
+
+  <insert id="insertUsedPoint">
+     insert into point values(point_id_seq.nextval,#{pointSum},'Used Points',default,#{member_id})
+  </insert>
+  
+  <insert id="savePoints">
+   insert into point values
+   (point_id_seq.nextval,(select grade_percent from grade 
+   where grade_name = (select grade_name from member where member_id = #{member_id}))*${productTotal},'Saved Points',default,#{member_id})
+  </insert>
+   
+  <insert id="insertRecomendadoMemberPoint">
+  	insert into point values(point_id_seq.nextval,'5000','추천인 입력받음',default,#{value})
+  </insert>
+  
+  <select id="selectByBound" resultType="kh.spring.dto.PointDTO">
+  	select * from (select * from (select target.*, row_number() over(order by point_date desc) rn from (select * from point where member_id = #{member_id}) target)) where rn between #{start} and #{end}
+  </select>
+  
+  <select id="selectRecordCount" resultType="int">
+  	select count(*) from point where member_id = #{value}
+  </select>
+
+  <select id="selectAll" resultType="kh.spring.dto.PointDTO">
+  	select * from point order by point_id asc
+  </select>
+  
+  <insert id="insertPoint">
+  	insert into point values(point_id_seq.nextval,#{point_used_saved},#{point_event},default,#{member_id})
+  </insert>
+  
+  <delete id="deletePoint">
+  	delete from point where point_id=#{point_id}
+  </delete>
+  
+  <update id="updatePoint">
+  	update point set point_used_saved = #{point_used_saved}, point_event = #{point_event}, member_id=#{member_id} where point_id = #{point_id}
+  </update>
+
+  <delete id="deletePointByMemberId">
+  	delete from point where member_id=#{member_id}
+  </delete>
+  
+  <insert id="insertKhEventMemberPoint">
+     insert into point values(point_id_seq.nextval,'5000','KH콜라보',default,#{value})
+  </insert>
+  
+  <select id="selectByIdandCheckKhEvent" resultType="int">
+  	select count(*) from point where member_id = #{value} and point_event = 'KH콜라보'
+  </select>
+  </mapper>
