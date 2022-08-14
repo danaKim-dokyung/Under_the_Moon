@@ -98,13 +98,17 @@
 
 2) Git 커밋메세지와 Naming 컨벤션을 설정한다.  
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/44a1182b-8afb-452b-a453-06608f9d10a7/Untitled.png)
+
+![Untitled](https://user-images.githubusercontent.com/83184270/184530166-44d5f9ad-ae31-41fb-a949-286a81041279.png)
+
+
 
 - 컨벤션에 관한 자세한 사항은 아래 Notion 페이지를 참고해주세요!
 
 3) 개발프로세스로는 칸반을 사용한다. 
+![Untitled](https://user-images.githubusercontent.com/83184270/184530183-b93d0813-ba3d-4389-a1fb-02e1e2653f5b.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/36a35ac8-43ec-4585-b803-955d1de4f092/Untitled.png)
+
 
 - 자세한 사항은 월하합작팀 Notion 을 통해 확인하실 수 있습니다.
 
