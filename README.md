@@ -17,7 +17,7 @@
 3. 프로젝트 진행 기간
     - 2021-1-12 ~ 2021-02-09 : 총 29일
     
-4. 월하합작 팀의 Workspace  <a href="https://angry-capacity-44d.notion.site/FINAL-Project-10356e5988474b5fa69612ca56c19e7f">바로가기</a>
+4. 월하합작 팀의 Workspace  <a href="https://angry-capacity-44d.notion.site/8-10356e5988474b5fa69612ca56c19e7f">바로가기</a>
     
     
 <br/> <br/> 
@@ -134,6 +134,6 @@
 
 아래 Notion 링크를 참조해주세요 ! 
 
-- 월하합작: 전국 8도 명주를 찾아서, <a href="https://angry-capacity-44d.notion.site/FINAL-Project-10356e5988474b5fa69612ca56c19e7f">Notion 바로가기</a>
+- 월하합작: 전국 8도 명주를 찾아서, <a href="https://angry-capacity-44d.notion.site/8-10356e5988474b5fa69612ca56c19e7f">Notion 바로가기</a>
 
 <br/> <br/> 
