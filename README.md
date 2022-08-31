@@ -17,7 +17,7 @@
 3. 프로젝트 진행 기간
     - 2021-1-12 ~ 2021-02-09 : 총 29일
     
-4. 월하합작 팀의 Workspace  <a href="https://angry-capacity-44d.notion.site/FINAL-Project-10356e5988474b5fa69612ca56c19e7f">Link</a>
+4. 월하합작 팀의 Workspace  <a href="https://angry-capacity-44d.notion.site/FINAL-Project-10356e5988474b5fa69612ca56c19e7f">바로가기</a>
     
     
 <br/> <br/> 
